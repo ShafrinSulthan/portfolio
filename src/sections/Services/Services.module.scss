@@ -1,0 +1,21 @@
+.serviceCard {
+  height: 100%;
+
+  h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, var(--accent-500), var(--accent-700));
+  color: #fff;
+}

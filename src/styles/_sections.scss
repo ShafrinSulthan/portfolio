@@ -1,0 +1,353 @@
+@use './variables';
+
+// ==========================================================================
+// About
+// ==========================================================================
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.75rem;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-copy {
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.about-objective {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.about-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+
+    i { color: var(--accent-cyan); }
+  }
+}
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-card {
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.1rem;
+
+    i { color: var(--accent-indigo-light); }
+  }
+
+  &__text {
+    font-size: var(--fs-sm);
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--accent-cyan);
+    transition: gap var(--dur-fast);
+
+    &:hover { gap: 0.65rem; }
+  }
+}
+
+.about-strengths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about-strength-pill {
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+// ==========================================================================
+// Skills
+// ==========================================================================
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card-wrap {
+  height: 100%;
+}
+
+.skill-card {
+  height: 100%;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  transition: box-shadow var(--dur-med) var(--ease-glass), scale var(--dur-med) var(--ease-glass);
+
+  &:hover {
+    box-shadow: var(--shadow-glow-indigo);
+    scale: 1.015;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.05rem;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    color: #fff;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-sm);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  transition: transform var(--dur-fast) var(--ease-glass), box-shadow var(--dur-fast) var(--ease-glass),
+    background var(--dur-fast);
+
+  svg, i {
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: var(--shadow-glow-indigo);
+    background: var(--card-hover-bg);
+  }
+}
+
+.tag-pill {
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  color: var(--accent-cyan);
+}
+
+// ==========================================================================
+// Education
+// ==========================================================================
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.education-card-wrap { height: 100%; }
+
+.education-card {
+  height: 100%;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+
+  &__degree {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  &__institution {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    margin-bottom: 1rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+
+    i { color: var(--accent-indigo-light); margin-right: 0.35rem; }
+  }
+}
+
+// ==========================================================================
+// Certifications
+// ==========================================================================
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card-wrap { height: 100%; }
+
+.cert-card {
+  height: 100%;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  position: relative;
+
+  &__ribbon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+
+  &__title {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  &__issuer {
+    font-size: var(--fs-sm);
+    color: var(--text-tertiary);
+    margin-bottom: 1.25rem;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--accent-cyan);
+    transition: gap var(--dur-fast);
+
+    &:hover { gap: 0.65rem; }
+  }
+}
+
+// 404
+.notfound-section {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem;
+}
+.notfound-card {
+  text-align: center; padding: clamp(2.5rem, 5vw, 4rem); max-width: 480px;
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.notfound-code { font-family: var(--font-display); font-size: 4.5rem; font-weight: 700; line-height: 1; }
+
+// ==========================================================================
+// Mobile-only content centering (About / Skills / Education / Certifications)
+// Desktop and tablet layouts are unchanged — this only applies under 576px.
+// ==========================================================================
+
+@media (max-width: 576px) {
+  .section-eyebrow,
+  .section-title,
+  .section-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-eyebrow {
+    justify-content: center;
+  }
+
+  .section-title {
+    line-height: 1.3;
+  }
+
+  .section-sub {
+    line-height: 1.65;
+    max-width: 100%;
+  }
+}
+
+// Mobile: ensure card containers center within their grid column.
+// Cards already stretch to fill the single mobile column, so this is a
+// defensive guarantee, not a width change — internal content/spacing and
+// left alignment are untouched.
+@media (max-width: 576px) {
+  .about-grid,
+  .skills-grid,
+  .education-grid,
+  .cert-grid {
+    justify-items: center;
+  }
+
+  .about-copy,
+  .about-side,
+  .skill-card-wrap,
+  .education-card-wrap,
+  .cert-card-wrap {
+    width: 100%;
+  }
+}

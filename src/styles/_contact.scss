@@ -1,0 +1,51 @@
+.contact-grid {
+  display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 1.75rem;
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+.contact-info {
+  padding: clamp(1.5rem, 2.5vw, 2.25rem); display: flex; flex-direction: column; gap: 1.1rem;
+  &__row {
+    display: flex; align-items: center; gap: 0.7rem; font-size: var(--fs-sm); color: var(--text-primary);
+    i { color: var(--accent-cyan); width: 20px; }
+  }
+  &__socials { display: flex; gap: 0.75rem; margin-top: 0.75rem; }
+  &__socials a {
+    width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+    background: var(--glass-surface); border: 1px solid var(--glass-border); color: var(--text-primary);
+    transition: transform var(--dur-fast), color var(--dur-fast);
+    &:hover { transform: translateY(-3px); color: var(--accent-cyan); }
+  }
+}
+.contact-form {
+  padding: clamp(1.5rem, 2.5vw, 2.25rem); display: flex; flex-direction: column; gap: 1.1rem;
+  &__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; @media (max-width: 560px) { grid-template-columns: 1fr; } }
+}
+.contact-field {
+  display: flex; flex-direction: column; gap: 0.35rem;
+  input, textarea {
+    background: var(--glass-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem; color: var(--text-primary); font-family: var(--font-body); font-size: var(--fs-sm);
+    outline: none; resize: vertical; transition: border-color var(--dur-fast);
+    &::placeholder { color: var(--text-tertiary); }
+    &:focus { border-color: var(--accent-indigo-light); }
+    &[aria-invalid="true"] { border-color: #f87171; }
+  }
+  &__error { font-size: var(--fs-xs); color: #f87171; }
+}
+.spinner {
+  width: 14px; height: 14px; border-radius: 50%; display: inline-block; margin-right: 0.4rem;
+  border: 2px solid rgba(255,255,255,0.5); border-top-color: #fff; animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+
+@media (max-width: 576px) {
+  .contact-grid {
+    justify-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}

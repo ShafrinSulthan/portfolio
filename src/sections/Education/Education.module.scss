@@ -1,0 +1,53 @@
+@use '../../styles/mixins' as *;
+
+.eduCard {
+  height: 100%;
+  padding: 30px 26px;
+  border-radius: var(--radius-md);
+  @include glass(var(--card-bg));
+  border-top: 3px solid var(--accent-500);
+  @include card-lift;
+
+  h5 {
+    font-size: 1.05rem;
+    margin-block: 10px 6px;
+  }
+}
+
+.iconTop {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: color-mix(in srgb, var(--accent-500) 16%, transparent);
+  color: var(--accent-500);
+  margin-bottom: 16px;
+}
+
+.duration {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.institution {
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+
+.score {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent-500);
+  font-size: 0.9rem;
+}
+
+.desc {
+  margin-top: 12px;
+  font-size: 0.88rem;
+}

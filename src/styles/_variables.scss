@@ -1,0 +1,89 @@
+// ==========================================================================
+// DESIGN TOKENS — Liquid Glass / Indigo-Cyan system
+// ==========================================================================
+
+:root {
+  // ---- Accent ramp (fixed across themes) ----
+  --accent-indigo: #4F46E5;
+  --accent-indigo-light: #6366F1;
+  --accent-cyan: #22D3EE;
+  --accent-violet: #8B5CF6;
+  --accent-gradient: linear-gradient(120deg, var(--accent-indigo) 0%, var(--accent-violet) 50%, var(--accent-cyan) 100%);
+
+  // ---- Typography ----
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Outfit', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --fs-hero: clamp(2.6rem, 6vw, 5rem);
+  --fs-h1: clamp(2rem, 4vw, 3.25rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --fs-h3: clamp(1.15rem, 2vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  // ---- Radii & spacing ----
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --radius-pill: 999px;
+
+  --section-pad-y: clamp(4rem, 8vw, 7rem);
+  --container-pad-x: clamp(1.25rem, 5vw, 3rem);
+
+  // ---- Motion ----
+  --ease-glass: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.45s;
+  --dur-slow: 0.9s;
+
+  // ---- Elevation ----
+  --shadow-glass: 0 8px 32px rgba(15, 15, 40, 0.16);
+  --shadow-glass-lg: 0 20px 60px rgba(15, 15, 40, 0.28);
+  --shadow-glow-indigo: 0 0 40px rgba(79, 70, 229, 0.35);
+}
+
+// ---- Dark theme (default) ----
+[data-theme='dark'] {
+  --bg-base: #0a0c16;
+  --bg-mesh-1: #1b1440;
+  --bg-mesh-2: #0e2340;
+  --bg-mesh-3: #150f2e;
+
+  --glass-surface: rgba(255, 255, 255, 0.055);
+  --glass-surface-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-blur: 18px;
+
+  --text-primary: #EDEFFB;
+  --text-secondary: #A6ABC9;
+  --text-tertiary: #6E7391;
+
+  --navbar-bg: rgba(10, 12, 22, 0.55);
+  --card-hover-bg: rgba(255, 255, 255, 0.09);
+  --divider: rgba(255, 255, 255, 0.09);
+  --scrollbar-track: rgba(255, 255, 255, 0.04);
+}
+
+// ---- Light theme ----
+[data-theme='light'] {
+  --bg-base: #F3F4FB;
+  --bg-mesh-1: #dfe1fb;
+  --bg-mesh-2: #d7f0f7;
+  --bg-mesh-3: #ece7fb;
+
+  --glass-surface: rgba(255, 255, 255, 0.55);
+  --glass-surface-strong: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-blur: 18px;
+
+  --text-primary: #14152B;
+  --text-secondary: #4B4F6B;
+  --text-tertiary: #7B7F9C;
+
+  --navbar-bg: rgba(255, 255, 255, 0.55);
+  --card-hover-bg: rgba(255, 255, 255, 0.85);
+  --divider: rgba(20, 21, 43, 0.08);
+  --scrollbar-track: rgba(20, 21, 43, 0.05);
+}
