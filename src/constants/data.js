@@ -12,7 +12,7 @@ export const PROFILE = {
   location: 'Madurai, Tamil Nadu, India',
   email: 'shafrinmunavarsulthan@gmail.com',
   phone: '+91 6381741303',
-  resumeUrl: '/resume-placeholder.pdf', // PLACEHOLDER — drop your real PDF in /public
+  resumeUrl: '/Shafrin_M_Resume.pdf', // PLACEHOLDER — drop your real PDF in /public
   cgpa: '8.12',
   objective:
     'I am a final-year B.Tech Computer Science Engineering (Artificial Intelligence and Data Science) student at Hindustan Institute of Technology and Science, Chennai. I enjoy developing modern web applications with Java, Spring Boot, React, MySQL and REST APIs. I enjoy solving real-world problems, learning new technologies and building clean, maintainable software.',
@@ -103,6 +103,12 @@ export const CERTIFICATIONS = [
     date: 'Issued May 9, 2026',
     credentialUrl: '/certificates/credo-systemz-ai-fullstack-workflows.png',
   },
+  {
+  title: 'JavaScript (Intermediate)',
+  issuer: 'HackerRank',
+  date: 'Issued Jul 10, 2026',
+  credentialUrl: '/certificates/javascript_intermediate certificate.pdf',
+  },
 ];
 
 export const SERVICES = [
@@ -121,11 +127,11 @@ export const SERVICES = [
     title: 'REST API Design',
     description: 'Well-documented, versioned REST APIs that are easy for other teams to integrate against.',
   },
-  {
-    icon: 'bi-palette',
-    title: 'UI / UX Design',
-    description: 'Interfaces designed with intent — spacing, hierarchy and motion that guide the user, not distract them.',
-  },
+  // {
+  //   icon: 'bi-palette',
+  //   title: 'UI / UX Design',
+  //   description: 'Interfaces designed with intent — spacing, hierarchy and motion that guide the user, not distract them.',
+  // },
 ];
 
 export const EMAILJS_CONFIG = {
@@ -160,7 +166,12 @@ export const PROJECT_OVERRIDES = [
   },
   {
     matchSubstring: 'readify',
-    liveUrl: null,
+    liveUrl: 'https://readify-smoky-mu.vercel.app/',
     videoUrl: '/demos/readify.mp4',
   },
+  {
+     matchSubstring: 'portfolio',
+     liveUrl: 'https://portfolio-seven-xi-2ol7pjv3vq.vercel.app/',
+     videoUrl: '/demos/portfolio.mp4',
+   },
 ];
